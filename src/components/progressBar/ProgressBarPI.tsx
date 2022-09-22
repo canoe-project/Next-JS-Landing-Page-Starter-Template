@@ -1,4 +1,4 @@
-const ProgressBarPI = (props: {
+type Props = {
   size?: number | undefined;
   progress?: number | undefined;
   trackWidth?: number | undefined;
@@ -6,36 +6,41 @@ const ProgressBarPI = (props: {
   indicatorWidth?: number | undefined;
   indicatorColor?: string | undefined;
   indicatorCap?: 'round' | 'inherit' | 'butt' | 'square' | undefined;
-  label?: string | undefined;
+  label?: string | number | undefined;
   labelColor?: string | undefined;
   spinnerMode?: false | undefined;
   spinnerSpeed?: number | undefined;
-}) => {
-  const {
-    size = 150,
-    progress = 0,
-    trackWidth = 10,
-    trackColor = `#ddd`,
-    indicatorWidth = 10,
-    indicatorColor = `#07c`,
-    indicatorCap = `round`,
-    label = `Loading...`,
-    labelColor = `#333`,
-    spinnerMode = false,
-    spinnerSpeed = 1,
-  } = props;
+  className?: string | undefined;
+};
 
+const ProgressBarPI = ({
+  size = 150,
+  progress = 0,
+  trackWidth = 10,
+  trackColor = `#ddd`,
+  indicatorWidth = 10,
+  indicatorColor = `#07c`,
+  indicatorCap = `round`,
+  label = `Loading...`,
+  labelColor = `text-selectedFont`,
+  spinnerMode = false,
+  spinnerSpeed = 1,
+  className,
+}: Props) => {
   const center = size / 2;
   const radius =
     center - (trackWidth > indicatorWidth ? trackWidth : indicatorWidth);
   const dashArray = 2 * Math.PI * radius;
   const dashOffset = dashArray * ((100 - progress) / 100);
 
-  const hideLabel = !!(size < 100 || !label.length || spinnerMode);
+  // const hideLabel = !!(size < 100 || !label.length || spinnerMode);
 
   return (
     <>
-      <div className="relative" style={{ width: size, height: size }}>
+      <div
+        className={`relative ${className}`}
+        style={{ width: size, height: size }}
+      >
         <svg className="-rotate-90" style={{ width: size, height: size }}>
           <circle
             className="svg-pi-track"
@@ -64,19 +69,9 @@ const ProgressBarPI = (props: {
             strokeLinecap={indicatorCap}
           />
         </svg>
-
-        {!hideLabel && (
-          <div
-            className="absolute text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            style={{ color: labelColor }}
-          >
-            <span className="text-xs opacity-50 ">{label}</span>
-
-            {!spinnerMode && (
-              <span className="block">
-                {`${progress > 100 ? 100 : progress}%`}
-              </span>
-            )}
+        {label !== undefined && (
+          <div className="absolute text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+            <p className={`text-base font-DoHyeon ${labelColor}`}>{label}</p>
           </div>
         )}
       </div>

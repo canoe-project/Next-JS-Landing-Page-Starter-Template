@@ -9,7 +9,6 @@ const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
 }) => {
   return (
     <>
-      <div>Valid MyApp type.</div>
       <Component {...pageProps} />
     </>
   );

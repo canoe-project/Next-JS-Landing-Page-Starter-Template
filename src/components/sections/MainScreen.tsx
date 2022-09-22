@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { AtomicCard } from 'components/card/AtomicCard';
-import ProgressBarPI from 'components/progressBar/ProgressBarPI';
+import { ProgressCard } from 'components/card/ProgressCard';
 import { Thermometer } from 'components/Thermometer';
 
 import { Floor } from './Floor';
@@ -9,6 +9,14 @@ import { Floor } from './Floor';
 const MainScreen = () => {
   return (
     <div className="flex max-h-full max-w-[80%] w-full p-4 m-4 relative">
+      <ProgressCard
+        content={`"미세먼지"란 대기 중에 떠다니거나 흩날려 내려오는 입자상물질인 먼지 중 다음의 흡입성먼지를 말합니다`}
+        name="미세먼지 농도"
+        value={42}
+        index={1}
+        unit="㎍/㎥"
+        progress={100}
+      />
       <div className="absolute flex bottom-0 left-2 m-2 items-end max-h-[15.5625em] max-w-[23.3125em] shrink-0 flex-wrap overflow-scroll scrollbar-hide">
         <AtomicCard
           atomicSymbol="CO"
@@ -46,8 +54,7 @@ const MainScreen = () => {
           index={5}
         ></AtomicCard>
       </div>
-      <Thermometer />
-      <ProgressBarPI />
+      <Thermometer value={90} />
       <Floor />
     </div>
   );
