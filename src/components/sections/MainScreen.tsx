@@ -3,6 +3,7 @@ import React from 'react';
 import { AtomicCard } from 'components/card/AtomicCard';
 import { ProgressCard } from 'components/card/ProgressCard';
 import { Thermometer } from 'components/Thermometer';
+import { CommonToggle } from 'components/toggle/CommonToggle';
 
 import { Floor } from './Floor';
 
@@ -17,6 +18,11 @@ const MainScreen = () => {
         unit="㎍/㎥"
         progress={100}
       />
+      <div className="absolute flex right-4 top-6">
+        <CommonToggle name="미세먼지 농도" value={true} />
+        <CommonToggle name="총휘발성유기화합물" value={true} />
+        <CommonToggle name="온도" value={true} />
+      </div>
       <div className="absolute flex bottom-0 left-2 m-2 items-end max-h-[15.5625em] max-w-[23.3125em] shrink-0 flex-wrap overflow-scroll scrollbar-hide">
         <AtomicCard
           atomicSymbol="CO"
@@ -54,7 +60,7 @@ const MainScreen = () => {
           index={5}
         ></AtomicCard>
       </div>
-      <Thermometer value={90} />
+      <Thermometer value={50} />
       <Floor />
     </div>
   );

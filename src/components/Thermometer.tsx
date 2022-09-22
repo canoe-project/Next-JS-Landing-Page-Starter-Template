@@ -10,7 +10,7 @@ const Thermometer = ({ value = 95 }: Props) => {
         {/* 0~95 */}
         <g
           className=" translate-y-[0%]  "
-          style={{ transform: `translate(70%,${value}%)` }}
+          style={{ transform: `translate(70%,${100 - value}%)` }}
         >
           <polygon
             className=" fill-white"
@@ -22,7 +22,7 @@ const Thermometer = ({ value = 95 }: Props) => {
             alignmentBaseline="text-before-edge"
             fontFamily="NanumSquare"
           >
-            27°C
+            {`${value}`}°C
           </text>
         </g>
       </svg>

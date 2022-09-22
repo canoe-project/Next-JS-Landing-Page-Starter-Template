@@ -31,13 +31,11 @@ const SubwayStationSideNavbar = () => {
         </NavButtonContainer>
       </div>
       <ul className="p-2 overflow-scroll ">
-        {stationList.map((station, idx) => {
+        {stationList.map((station) => {
           return (
-            <>
-              <li key={idx}>
-                {`${station.stationName} ${station.stationNumber}`}
-              </li>
-            </>
+            <li key={station.stationNumber}>
+              {`${station.stationName} ${station.stationNumber}`}
+            </li>
           );
         })}
       </ul>
