@@ -1,14 +1,26 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+/** @type {import('next').NextConfig} */
+const dev = process.env.NODE_ENV !== 'production';
 
-module.exports = withBundleAnalyzer({
-  poweredByHeader: false,
-  trailingSlash: true,
-  basePath: '',
-  // The starter code load resources from `public` folder with `router.basePath` in React components.
-  // So, the source code is "basePath-ready".
-  // You can remove `basePath` if you don't need it.
+const nextConfig = {
   reactStrictMode: true,
-});
+  swcMinify: true,
+  images: {},
+  env: {
+    HOSTNAME: dev
+      ? 'http://localhost:3000'
+      : 'https://infinite-scroll-project.vercel.app/',
+    AIR_QUALITY_DOMAIN: process.env.AIR_QUALITY_DOMAIN,
+    PUBLIC_DATA_SERVICE_KEY: process.env.PUBLIC_DATA_SERVICE_KEY,
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+
+    return config;
+  },
+};
+
+module.exports = nextConfig;

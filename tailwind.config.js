@@ -1,3 +1,5 @@
+const tailwindScrollbarHide = require('tailwind-scrollbar-hide');
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -14,6 +16,12 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
+      keyframes: {
+        spinner: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+      },
       colors: {
         primary: {
           100: '#E6F6FE',
@@ -37,12 +45,37 @@ module.exports = {
           800: '#2d3748',
           900: '#1a202c',
         },
+        lightPurple: '#FFD6FF',
+        purple: '#E7C6FF',
+        darkPurple: '#C8B6FF',
+        blue: '#BBD0FF',
+        darkBlue: '#B8C0FF',
+        logo: '#A3A5B5',
+        border: '#F3F3F3',
+        selectedFont: '#323B4C',
+        unSelectedFont: '#A3A5B5',
+        unSelectedIcon: '#A0A1AA',
+        toggle: '#D9D6E5',
+        cardValue: '#92959F',
+        atomicRed: '#EF476F',
+        atomicYellow: '#FFD166',
+        atomicIndigo: '#073B4C',
+        atomicGreen: '#06D6A0',
+        atomicBlue: '#118AB2',
       },
       lineHeight: {
         hero: '4.5rem',
       },
+      fontFamily: {
+        NanumSquare: ['NanumSquare', 'sans-serif'],
+        NanumSquareRound: ['NanumSquareRound', 'sans-serif'],
+        BlackHanSans: ['Black Han Sans', 'sans-serif'],
+        DoHyeon: ['Do Hyeon', 'sans-serif'],
+        NanumGothic: ['Nanum Gothic', 'sans-serif'],
+        Roboto: ['Roboto', 'sans-serif'],
+      },
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [tailwindScrollbarHide],
 };

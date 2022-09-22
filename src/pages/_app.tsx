@@ -1,9 +1,31 @@
-import { AppProps } from 'next/app';
+import { NextComponentType } from 'next';
+import { AppContext, AppInitialProps, AppProps } from 'next/app';
 
 import 'styles/global.css';
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Component {...pageProps} />
-);
+const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
+  Component,
+  pageProps,
+}) => {
+  return (
+    <>
+      <div>Valid MyApp type.</div>
+      <Component {...pageProps} />
+    </>
+  );
+};
+
+MyApp.getInitialProps = async ({
+  Component,
+  ctx,
+}: AppContext): Promise<AppInitialProps> => {
+  let pageProps = {};
+
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
+  }
+
+  return { pageProps };
+};
 
 export default MyApp;

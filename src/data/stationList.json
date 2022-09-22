@@ -1,0 +1,458 @@
+[
+  {
+    "stationName": "다대포해수욕장",
+    "stationNumber": 95
+  },
+  {
+    "stationName": "다대포항",
+    "stationNumber": 96
+  },
+  {
+    "stationName": "낫개",
+    "stationNumber": 97
+  },
+  {
+    "stationName": "신장림",
+    "stationNumber": 98
+  },
+  {
+    "stationName": "장림",
+    "stationNumber": 99
+  },
+  {
+    "stationName": "동매",
+    "stationNumber": 100
+  },
+  {
+    "stationName": "신평",
+    "stationNumber": 101
+  },
+  {
+    "stationName": "하단",
+    "stationNumber": 102
+  },
+  {
+    "stationName": "당리",
+    "stationNumber": 103
+  },
+  {
+    "stationName": "사하",
+    "stationNumber": 104
+  },
+  {
+    "stationName": "괴정",
+    "stationNumber": 105
+  },
+  {
+    "stationName": "대티",
+    "stationNumber": 106
+  },
+  {
+    "stationName": "서대신",
+    "stationNumber": 107
+  },
+  {
+    "stationName": "동대신",
+    "stationNumber": 108
+  },
+  {
+    "stationName": "토성",
+    "stationNumber": 109
+  },
+  {
+    "stationName": "자갈치",
+    "stationNumber": 110
+  },
+  {
+    "stationName": "남포",
+    "stationNumber": 111
+  },
+  {
+    "stationName": "중앙",
+    "stationNumber": 112
+  },
+  {
+    "stationName": "부산",
+    "stationNumber": 113
+  },
+  {
+    "stationName": "초량",
+    "stationNumber": 114
+  },
+  {
+    "stationName": "부산진",
+    "stationNumber": 115
+  },
+  {
+    "stationName": "좌천",
+    "stationNumber": 116
+  },
+  {
+    "stationName": "범일",
+    "stationNumber": 117
+  },
+  {
+    "stationName": "범내골",
+    "stationNumber": 118
+  },
+  {
+    "stationName": "서면(1)",
+    "stationNumber": 119
+  },
+  {
+    "stationName": "부전",
+    "stationNumber": 120
+  },
+  {
+    "stationName": "양정",
+    "stationNumber": 121
+  },
+  {
+    "stationName": "시청",
+    "stationNumber": 122
+  },
+  {
+    "stationName": "연산(1)",
+    "stationNumber": 123
+  },
+  {
+    "stationName": "교대",
+    "stationNumber": 124
+  },
+  {
+    "stationName": "동래(1)",
+    "stationNumber": 125
+  },
+  {
+    "stationName": "명륜",
+    "stationNumber": 126
+  },
+  {
+    "stationName": "온천장",
+    "stationNumber": 127
+  },
+  {
+    "stationName": "부산대",
+    "stationNumber": 128
+  },
+  {
+    "stationName": "장전",
+    "stationNumber": 129
+  },
+  {
+    "stationName": "구서",
+    "stationNumber": 130
+  },
+  {
+    "stationName": "두실",
+    "stationNumber": 131
+  },
+  {
+    "stationName": "남산",
+    "stationNumber": 132
+  },
+  {
+    "stationName": "범어사",
+    "stationNumber": 133
+  },
+  {
+    "stationName": "노포",
+    "stationNumber": 134
+  },
+  {
+    "stationName": "장산",
+    "stationNumber": 201
+  },
+  {
+    "stationName": "중동",
+    "stationNumber": 202
+  },
+  {
+    "stationName": "해운대",
+    "stationNumber": 203
+  },
+  {
+    "stationName": "동백",
+    "stationNumber": 204
+  },
+  {
+    "stationName": "벡스코(시립미술관)",
+    "stationNumber": 205
+  },
+  {
+    "stationName": "센텀시티",
+    "stationNumber": 206
+  },
+  {
+    "stationName": "민락",
+    "stationNumber": 207
+  },
+  {
+    "stationName": "수영(2)",
+    "stationNumber": 208
+  },
+  {
+    "stationName": "광안",
+    "stationNumber": 209
+  },
+  {
+    "stationName": "금련산",
+    "stationNumber": 210
+  },
+  {
+    "stationName": "남천",
+    "stationNumber": 211
+  },
+  {
+    "stationName": "경성대.부경대",
+    "stationNumber": 212
+  },
+  {
+    "stationName": "대연",
+    "stationNumber": 213
+  },
+  {
+    "stationName": "못골",
+    "stationNumber": 214
+  },
+  {
+    "stationName": "지게골",
+    "stationNumber": 215
+  },
+  {
+    "stationName": "문현",
+    "stationNumber": 216
+  },
+  {
+    "stationName": "국제금융센터·부산은행",
+    "stationNumber": 217
+  },
+  {
+    "stationName": "전포",
+    "stationNumber": 218
+  },
+  {
+    "stationName": "서면(2)",
+    "stationNumber": 219
+  },
+  {
+    "stationName": "부암",
+    "stationNumber": 220
+  },
+  {
+    "stationName": "가야",
+    "stationNumber": 221
+  },
+  {
+    "stationName": "동의대",
+    "stationNumber": 222
+  },
+  {
+    "stationName": "개금",
+    "stationNumber": 223
+  },
+  {
+    "stationName": "냉정",
+    "stationNumber": 224
+  },
+  {
+    "stationName": "주례",
+    "stationNumber": 225
+  },
+  {
+    "stationName": "감전",
+    "stationNumber": 226
+  },
+  {
+    "stationName": "사상(2)",
+    "stationNumber": 227
+  },
+  {
+    "stationName": "덕포",
+    "stationNumber": 228
+  },
+  {
+    "stationName": "모덕",
+    "stationNumber": 229
+  },
+  {
+    "stationName": "모라",
+    "stationNumber": 230
+  },
+  {
+    "stationName": "구남",
+    "stationNumber": 231
+  },
+  {
+    "stationName": "구명",
+    "stationNumber": 232
+  },
+  {
+    "stationName": "덕천(2)",
+    "stationNumber": 233
+  },
+  {
+    "stationName": "수정",
+    "stationNumber": 234
+  },
+  {
+    "stationName": "화명",
+    "stationNumber": 235
+  },
+  {
+    "stationName": "율리",
+    "stationNumber": 236
+  },
+  {
+    "stationName": "동원",
+    "stationNumber": 237
+  },
+  {
+    "stationName": "금곡",
+    "stationNumber": 238
+  },
+  {
+    "stationName": "호포",
+    "stationNumber": 239
+  },
+  {
+    "stationName": "증산",
+    "stationNumber": 240
+  },
+  {
+    "stationName": "부산대양산캠퍼스",
+    "stationNumber": 241
+  },
+  {
+    "stationName": "남양산",
+    "stationNumber": 242
+  },
+  {
+    "stationName": "양산",
+    "stationNumber": 243
+  },
+  {
+    "stationName": "수영(3)",
+    "stationNumber": 301
+  },
+  {
+    "stationName": "망미",
+    "stationNumber": 302
+  },
+  {
+    "stationName": "배산",
+    "stationNumber": 303
+  },
+  {
+    "stationName": "물만골",
+    "stationNumber": 304
+  },
+  {
+    "stationName": "연산(3)",
+    "stationNumber": 305
+  },
+  {
+    "stationName": "거제",
+    "stationNumber": 306
+  },
+  {
+    "stationName": "종합운동장",
+    "stationNumber": 307
+  },
+  {
+    "stationName": "사직",
+    "stationNumber": 308
+  },
+  {
+    "stationName": "미남(3)",
+    "stationNumber": 309
+  },
+  {
+    "stationName": "만덕",
+    "stationNumber": 310
+  },
+  {
+    "stationName": "남산정",
+    "stationNumber": 311
+  },
+  {
+    "stationName": "숙등",
+    "stationNumber": 312
+  },
+  {
+    "stationName": "덕천(3)",
+    "stationNumber": 313
+  },
+  {
+    "stationName": "구포",
+    "stationNumber": 314
+  },
+  {
+    "stationName": "강서구청",
+    "stationNumber": 315
+  },
+  {
+    "stationName": "체육공원",
+    "stationNumber": 316
+  },
+  {
+    "stationName": "대저",
+    "stationNumber": 317
+  },
+  {
+    "stationName": "미남(4)",
+    "stationNumber": 401
+  },
+  {
+    "stationName": "동래(4)",
+    "stationNumber": 402
+  },
+  {
+    "stationName": "수안",
+    "stationNumber": 403
+  },
+  {
+    "stationName": "낙민",
+    "stationNumber": 404
+  },
+  {
+    "stationName": "충렬사",
+    "stationNumber": 405
+  },
+  {
+    "stationName": "명장",
+    "stationNumber": 406
+  },
+  {
+    "stationName": "서동",
+    "stationNumber": 407
+  },
+  {
+    "stationName": "금사",
+    "stationNumber": 408
+  },
+  {
+    "stationName": "반여농산물시장",
+    "stationNumber": 409
+  },
+  {
+    "stationName": "석대",
+    "stationNumber": 410
+  },
+  {
+    "stationName": "영산대",
+    "stationNumber": 411
+  },
+  {
+    "stationName": "동부산대학",
+    "stationNumber": 412
+  },
+  {
+    "stationName": "고촌",
+    "stationNumber": 413
+  },
+  {
+    "stationName": "안평",
+    "stationNumber": 414
+  }
+]

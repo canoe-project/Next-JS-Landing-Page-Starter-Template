@@ -1,38 +1,48 @@
-import { ReactNode } from 'react';
+import { useEffect, useState } from 'react';
 
-import Link from 'next/link';
+import { NavButton } from 'components/button/NavButton';
+import { NavButtonContainer } from 'components/button/NavButtonContainer';
+import { Logo } from 'components/paragraph/Logo';
+import { Symbol } from 'components/paragraph/Symbol';
+import stationListJSON from 'data/stationList.json';
 
-type INavbarProps = {
-  logo: ReactNode;
-  children: ReactNode;
+type StationType = {
+  stationName: string;
+  stationNumber: number;
 };
 
-const NavbarTwoColumns = (props: INavbarProps) => (
-  <div className="flex flex-wrap items-center justify-between">
-    <div>
-      <Link href="/">
-        <a>{props.logo}</a>
-      </Link>
-    </div>
+const SubwayStationSideNavbar = () => {
+  const [stationList, setStationList] = useState<StationType[]>([]);
 
-    <nav>
-      <ul className="flex items-center text-xl font-medium text-gray-800 navbar">
-        {props.children}
+  useEffect(() => {
+    setStationList(stationListJSON);
+  }, []);
+
+  return (
+    <nav className="flex max-w-[24.75em] w-[20%] border-r border-r-[#F3F3F3] p-10 max-h-screen flex-col">
+      <div className="flex flex-row flex-shrink-0 p-2">
+        <Symbol />
+        <Logo />
+      </div>
+      <div className="flex flex-row flex-shrink-0 p-2 ">
+        <NavButtonContainer>
+          <NavButton icon="list" defaultForce={true} />
+          <NavButton icon="map" />
+        </NavButtonContainer>
+      </div>
+      <ul className="p-2 overflow-scroll ">
+        {stationList.map((station, idx) => {
+          return (
+            <>
+              <li key={idx}>
+                {`${station.stationName} ${station.stationNumber}`}
+              </li>
+            </>
+          );
+        })}
       </ul>
     </nav>
+  );
+};
 
-    <style jsx>
-      {`
-        .navbar :global(li:not(:first-child)) {
-          @apply mt-0;
-        }
-
-        .navbar :global(li:not(:last-child)) {
-          @apply mr-5;
-        }
-      `}
-    </style>
-  </div>
-);
-
-export { NavbarTwoColumns };
+export { SubwayStationSideNavbar };
