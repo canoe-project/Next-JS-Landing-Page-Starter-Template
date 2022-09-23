@@ -62,6 +62,7 @@ module.exports = {
         atomicIndigo: '#073B4C',
         atomicGreen: '#06D6A0',
         atomicBlue: '#118AB2',
+        subtitle: '#7F7F7F',
       },
       lineHeight: {
         hero: '4.5rem',

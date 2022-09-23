@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-import { Canvas, MeshProps } from '@react-three/fiber';
+import { Canvas, MeshProps, useFrame } from '@react-three/fiber';
 
 import { useColor } from 'src/hook/useColor';
 
@@ -13,9 +13,9 @@ function Box(props: MeshProps) {
   // Subscribe this component to the render-loop, rotate the mesh every frame
   // Return the view, these are regular Threejs elements expressed in JSX
   // useFrame((state, delta) => (ref.current.rotation.z += 0.01));
-  // useFrame(() => {
-  //   ref.current.rotation.z += 0.01;
-  // });
+  useFrame(() => {
+    ref.current.rotation.z += 0.01;
+  });
   return (
     <mesh
       {...props}
