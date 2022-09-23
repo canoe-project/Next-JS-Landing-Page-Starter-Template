@@ -4,7 +4,7 @@ import { NavButton } from 'components/button/NavButton';
 import { NavButtonContainer } from 'components/button/NavButtonContainer';
 import { Logo } from 'components/paragraph/Logo';
 import { Symbol } from 'components/paragraph/Symbol';
-import stationListJSON from 'data/stationList.json';
+import stationGroupJSON from 'data/stationGroup.json';
 
 type StationType = {
   stationName: string;
@@ -12,10 +12,9 @@ type StationType = {
 };
 
 const SubwayStationSideNavbar = () => {
-  const [stationList, setStationList] = useState<StationType[]>([]);
-
+  const [stationGroup, setStationGroup] = useState<StationType[][]>([[]]);
   useEffect(() => {
-    setStationList(stationListJSON);
+    setStationGroup(stationGroupJSON);
   }, []);
 
   return (
@@ -30,15 +29,38 @@ const SubwayStationSideNavbar = () => {
           <NavButton icon="map" />
         </NavButtonContainer>
       </div>
-      <ul className="p-2 overflow-scroll ">
-        {stationList.map((station) => {
+
+      <div className="p-2 overflow-scroll text-selectedFontont scrollbar-hide">
+        {stationGroup.map((stationList, listNumber) => {
           return (
-            <li key={station.stationNumber}>
-              {`${station.stationName} ${station.stationNumber}`}
-            </li>
+            <div key={`${listNumber}-Group`}>
+              <div
+                key={`${listNumber}-titleContain`}
+                className={`flex flex-row`}
+              >
+                <p
+                  className={`text-2xl font-DoHyeon `}
+                  key={`${listNumber}-title`}
+                >
+                  {`${listNumber + 1} 호선`}
+                </p>
+                <span className="self-center material-symbols-outlined">
+                  expand_more
+                </span>
+              </div>
+              <ul>
+                {stationList.map((station) => {
+                  return (
+                    <li key={station.stationNumber}>
+                      {`${station.stationName}`}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           );
         })}
-      </ul>
+      </div>
     </nav>
   );
 };
