@@ -55,6 +55,7 @@ module.exports = {
         selectedFont: '#323B4C',
         unSelectedFont: '#A3A5B5',
         unSelectedIcon: '#A0A1AA',
+        selectedIcon: '#F7F6F9',
         toggle: '#D9D6E5',
         cardValue: '#92959F',
         atomicRed: '#EF476F',

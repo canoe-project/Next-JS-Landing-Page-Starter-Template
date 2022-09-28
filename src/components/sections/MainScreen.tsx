@@ -2,14 +2,16 @@ import React from 'react';
 
 import { AtomicCard } from 'components/card/AtomicCard';
 import { ProgressCard } from 'components/card/ProgressCard';
+import { Room } from 'components/mesh/Room';
 import { Thermometer } from 'components/Thermometer';
 import { CommonToggle } from 'components/toggle/CommonToggle';
 
-import { Floor } from './Floor';
+import { CanvasContainer } from './CanvasContainer';
+import { CanvasLayer } from './CanvasLayer';
 
 const MainScreen = () => {
   return (
-    <div className="flex max-h-full max-w-[80%] w-full p-4 m-4 relative">
+    <div className="flex max-h-full max-w-[80%] w-full p-4 m-4 relative overflow-hidden">
       <ProgressCard
         content={`"미세먼지"란 대기 중에 떠다니거나 흩날려 내려오는 입자상물질인 먼지 중 다음의 흡입성먼지를 말합니다`}
         name="미세먼지 농도"
@@ -61,7 +63,21 @@ const MainScreen = () => {
         ></AtomicCard>
       </div>
       <Thermometer value={50} />
-      <Floor />
+      <div
+        className={`relative w-full h-full transition-all ease-in-out delay-75 `}
+      >
+        <CanvasContainer>
+          <CanvasLayer>
+            <Room></Room>
+          </CanvasLayer>
+          <CanvasLayer>
+            <Room></Room>
+          </CanvasLayer>
+          <CanvasLayer>
+            <Room></Room>
+          </CanvasLayer>
+        </CanvasContainer>
+      </div>
     </div>
   );
 };
