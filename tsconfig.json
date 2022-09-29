@@ -20,9 +20,15 @@
       "pages/*": ["src/pages/*"],
       "styles/*": ["src/styles/*"],
       "utils/*": ["src/utils/*"],
-      "data/*": ["src/data/*"]
+      "data/*": ["src/data/*"],
+      "interface/*": ["src/interface/*"]
     }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/mesh/Room.js"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/mesh/Room.js"
+  ]
 }

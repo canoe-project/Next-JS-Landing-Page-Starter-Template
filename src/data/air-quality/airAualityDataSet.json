@@ -1,0 +1,74 @@
+{
+  "airflow": {
+    "nameEN": "airflow",
+    "nameKR": "기류",
+    "description": "",
+    "unit": "m/sec"
+  },
+  "asbestos": {
+    "nameEN": "asbestos",
+    "nameKR": "석면",
+    "description": "",
+    "unit": "개/cc"
+  },
+  "co": {
+    "nameEN": "CO",
+    "nameKR": "일산화탄소",
+    "description": "",
+    "unit": "ppm"
+  },
+  "co2": {
+    "nameEN": "CO2",
+    "nameKR": "이산화탄소",
+    "description": "",
+    "unit": "ppm"
+  },
+  "hcho": {
+    "nameEN": "HCHO",
+    "nameKR": "메탄",
+    "description": "",
+    "unit": "㎍/㎥"
+  },
+  "humidity": {
+    "nameEN": "Humidity",
+    "nameKR": "습도",
+    "description": "",
+    "unit": "% RH"
+  },
+  "no2": {
+    "nameEN": "NO2",
+    "nameKR": "이산화질소",
+    "description": "",
+    "unit": "ppm"
+  },
+  "o3": {
+    "nameEN": "O3",
+    "nameKR": "오존",
+    "description": "",
+    "unit": "ppm"
+  },
+  "pm10": {
+    "nameEN": "PM-10",
+    "nameKR": "미세 먼지",
+    "description": "\"미세먼지\"란 대기 중에 떠다니거나 흩날려 내려오는 입자상물질인 먼지 중 다음의 흡입성먼지를 말합니다",
+    "unit": "㎍/㎥"
+  },
+  "rn": {
+    "nameEN": "Airflow",
+    "nameKR": "라돈",
+    "description": "",
+    "unit": "Bq/㎥"
+  },
+  "temperature": {
+    "nameEN": "Temperature",
+    "nameKR": "온도",
+    "description": "",
+    "unit": "℃"
+  },
+  "tvoc": {
+    "nameEN": "Tvoc",
+    "nameKR": "TVOC",
+    "description": "",
+    "unit": "㎍/㎥"
+  }
+}

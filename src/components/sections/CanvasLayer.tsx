@@ -15,7 +15,7 @@ const CanvasLayer = ({ hidden = true, children, className }: Props) => {
   return (
     <Canvas
       className={`${
-        hidden ? 'opacity-40' : 'z-50 '
+        hidden ? 'opacity-30' : 'z-10 '
       } ${className} cursor-pointer`}
       style={{ position: 'absolute' }}
       camera={{

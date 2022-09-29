@@ -1,0 +1,218 @@
+{
+  "airflow": {
+    "good": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "average": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "bad": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "veryBad": {
+      "BPLO": 0,
+      "BPHI": 0
+    }
+  },
+  "asbestos": {
+    "good": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "average": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "bad": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "veryBad": {
+      "BPLO": 0,
+      "BPHI": 0
+    }
+  },
+  "co2": {
+    "good": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "average": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "bad": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "veryBad": {
+      "BPLO": 0,
+      "BPHI": 0
+    }
+  },
+  "hcho": {
+    "good": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "average": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "bad": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "veryBad": {
+      "BPLO": 0,
+      "BPHI": 0
+    }
+  },
+  "humidity": {
+    "good": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "average": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "bad": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "veryBad": {
+      "BPLO": 0,
+      "BPHI": 0
+    }
+  },
+  "rn": {
+    "good": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "average": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "bad": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "veryBad": {
+      "BPLO": 0,
+      "BPHI": 0
+    }
+  },
+  "temperature": {
+    "good": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "average": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "bad": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "veryBad": {
+      "BPLO": 0,
+      "BPHI": 0
+    }
+  },
+  "tvoc": {
+    "good": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "average": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "bad": {
+      "BPLO": 0,
+      "BPHI": 0
+    },
+    "veryBad": {
+      "BPLO": 0,
+      "BPHI": 0
+    }
+  },
+  "co": {
+    "good": {
+      "BPLO": 0,
+      "BPHI": 2
+    },
+    "average": {
+      "BPLO": 2.01,
+      "BPHI": 9
+    },
+    "bad": {
+      "BPLO": 9.01,
+      "BPHI": 15
+    },
+    "veryBad": {
+      "BPLO": 15.01,
+      "BPHI": 50
+    }
+  },
+  "no2": {
+    "good": {
+      "BPLO": 0,
+      "BPHI": 0.030
+    },
+    "average": {
+      "BPLO": 0.031,
+      "BPHI": 0.060
+    },
+    "bad": {
+      "BPLO": 0.061,
+      "BPHI": 0.200
+    },
+    "veryBad": {
+      "BPLO": 0.201,
+      "BPHI": 2
+    }
+  },
+  "o3": {
+    "good": {
+      "BPLO": 0,
+      "BPHI": 0.030
+    },
+    "average": {
+      "BPLO": 0.031,
+      "BPHI": 0.090
+    },
+    "bad": {
+      "BPLO": 0.091,
+      "BPHI": 0.150
+    },
+    "veryBad": {
+      "BPLO": 0.151,
+      "BPHI": 0.6
+    }
+  },
+  "pm10": {
+    "good": {
+      "BPLO": 0,
+      "BPHI": 30
+    },
+    "average": {
+      "BPLO": 31,
+      "BPHI": 80
+    },
+    "bad": {
+      "BPLO": 81,
+      "BPHI": 150
+    },
+    "veryBad": {
+      "BPLO": 151,
+      "BPHI": 600
+    }
+  }
+}

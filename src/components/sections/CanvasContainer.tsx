@@ -1,52 +1,31 @@
 import React, {
   Children,
-  ReactNode,
   useState,
   useEffect,
   cloneElement,
-  useReducer,
   WheelEvent,
   MouseEvent,
+  ReactNode,
+  ReactElement,
+  isValidElement,
 } from 'react';
 
+interface CanvasType {
+  wheel?: boolean;
+  onClick?: Function;
+  hidden?: boolean;
+  children?: ReactNode;
+  className: string;
+}
+
 interface Props {
-  children: ReactNode;
+  children: ReactNode | ReactNode[];
 }
-
-interface Reducer {
-  prevCanvas: number;
-  currCanvas: number;
-  nextCanvas: number;
-}
-
-const reducer = (prevState: Reducer, action: { index: number }): Reducer => {
-  return {
-    prevCanvas: action.index - 1,
-    currCanvas: action.index,
-    nextCanvas: action.index + 1,
-  };
-};
 
 const CanvasContainer = ({ children }: Props) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [lastIndex, setLastIndex] = useState<number>(0);
-  const [arrayChildren, setArrayChildren] = useState(
-    Children.toArray(children)
-  );
-
-  const [canvasReduce, setCanvasReduce] = useReducer<
-    (prevState: Reducer, action: { index: number }) => Reducer
-  >(reducer, {
-    prevCanvas: -1,
-    currCanvas: 0,
-    nextCanvas: 1,
-  });
-
-  useEffect(() => {
-    setCanvasReduce({
-      index: currentIndex,
-    });
-  }, [currentIndex, lastIndex]);
+  const arrayChildren = Children.toArray(children);
 
   useEffect(() => {
     setLastIndex(arrayChildren.length);
@@ -91,22 +70,31 @@ const CanvasContainer = ({ children }: Props) => {
       onClick={onClick}
       className={`flex flex-col flex-1 h-full w-full`}
     >
-      {canvasReduce.prevCanvas > 0 &&
-        cloneElement(arrayChildren[canvasReduce.prevCanvas], {
-          ...arrayChildren[canvasReduce.prevCanvas],
-          className: '-top-1/2',
-        })}
-      {arrayChildren[canvasReduce.currCanvas] !== undefined &&
-        cloneElement(arrayChildren[canvasReduce.currCanvas], {
-          ...arrayChildren[canvasReduce.currCanvas],
+      {currentIndex > 0 &&
+        isValidElement(arrayChildren[currentIndex - 1]) &&
+        cloneElement(
+          arrayChildren[currentIndex - 1] as ReactElement<CanvasType>,
+          {
+            ...(arrayChildren[currentIndex - 1] as ReactElement<CanvasType>),
+            className: '-top-1/2',
+          }
+        )}
+      {arrayChildren[currentIndex] !== undefined &&
+        isValidElement(arrayChildren[currentIndex]) &&
+        cloneElement(arrayChildren[currentIndex] as ReactElement<CanvasType>, {
+          ...(arrayChildren[currentIndex] as ReactElement<CanvasType>),
           className: '',
           hidden: false,
         })}
-      {canvasReduce.nextCanvas < lastIndex &&
-        cloneElement(arrayChildren[canvasReduce.nextCanvas], {
-          ...arrayChildren[canvasReduce.nextCanvas],
-          className: 'top-1/2',
-        })}
+      {currentIndex + 1 < lastIndex &&
+        isValidElement(arrayChildren[currentIndex + 1]) &&
+        cloneElement(
+          arrayChildren[currentIndex + 1] as ReactElement<CanvasType>,
+          {
+            ...(arrayChildren[currentIndex + 1] as ReactElement<CanvasType>),
+            className: 'top-1/2',
+          }
+        )}
     </div>
   );
 };
