@@ -3,7 +3,7 @@
 const dev = process.env.NODE_ENV !== 'production';
 
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   swcMinify: true,
   images: {},
   env: {

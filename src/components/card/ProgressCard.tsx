@@ -30,6 +30,7 @@ const ProgressCard = ({
   const [airContent, setAirContent] = useAirContent(name);
   const [airQuality, setAirQuality] = useAirQuality(name);
   const [localProgress, setLocalProgress] = useState<number>(progress);
+
   useEffect(() => {
     setAirQuality(name);
     setAirContent(name);
@@ -40,7 +41,7 @@ const ProgressCard = ({
   }, [value, airQuality]);
   if (name === undefined) {
     return (
-      <div className="absolute z-50 flex flex-col p-4 bg-white rounded w-[13.5625em] shadow-md m-4 hover:scale-110 hover: duration-300 h-max">
+      <div className="absolute z-50 flex flex-col p-4 bg-white rounded w-[13.5625em] shadow-md m-4 hover:scale-110 hover: duration-300 h-max ">
         {/* title */}
         <p className="m-2 text-2xl text-logo font-NanumSquareRound max-w-[9.25em] flex flex-wrap">{`${name}`}</p>
         {/* content */}
@@ -60,7 +61,7 @@ const ProgressCard = ({
     );
   }
   return (
-    <div className="absolute z-50 flex flex-col p-4 bg-white rounded w-[13.5625em] shadow-md m-4 hover:scale-110 hover: duration-300 h-max">
+    <div className="absolute z-50 flex flex-col p-4 bg-white rounded w-[13.5625em] shadow-md m-4 hover:scale-110 hover: duration-300 h-max animate-fade-in-down ">
       {/* title */}
       <p className="m-2 text-2xl text-logo font-NanumSquareRound max-w-[9.25em] flex flex-wrap">{`${airContent.nameKR}`}</p>
       {/* content */}

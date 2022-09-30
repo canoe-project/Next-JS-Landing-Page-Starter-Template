@@ -19,7 +19,7 @@ const SubwayStationSideNavbar = () => {
   }, []);
 
   return (
-    <nav className="flex max-w-[24.75em] w-[20%] border-r border-r-[#F3F3F3] p-10 min-h-screen flex-col">
+    <nav className="flex max-w-[24.75em] w-[25%] border-r border-r-[#F3F3F3] p-10 min-h-screen flex-col">
       <div className="flex flex-row flex-shrink-0 p-2">
         <Symbol />
         <Logo />

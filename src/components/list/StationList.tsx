@@ -1,5 +1,11 @@
 import { useState, useEffect, Fragment, MouseEvent } from 'react';
 
+import { useRouter } from 'next/router';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { RootState } from 'store/store';
+import { setStation } from 'store/subwayStationReducer';
+
 type StationType = {
   stationName: string;
   stationNumber: number;
@@ -10,24 +16,37 @@ type Props = {
   group: StationType[];
 };
 
-const onOver = (e: MouseEvent<HTMLElement>) => {
-  const rounter = e.currentTarget.querySelector('div.ronud') as HTMLElement;
-  const p = e.currentTarget.querySelector('p') as HTMLElement;
-  rounter.style.backgroundColor = '#ffffff';
-  p.style.backgroundColor = '#F7F6F9';
-};
+// const onOverEffect = (e: MouseEvent<HTMLElement>) => {
+//   const rounter = e.currentTarget.querySelector('div.ronud') as HTMLElement;
+//   const p = e.currentTarget.querySelector('p') as HTMLElement;
+//   rounter.style.backgroundColor = '#ffffff';
+//   p.style.backgroundColor = '#F7F6F9';
+// };
 
-const onOut = (e: MouseEvent<HTMLLIElement>) => {
-  const rounter = e.currentTarget.querySelector('div.ronud') as HTMLElement;
-  const p = e.currentTarget.querySelector('p') as HTMLElement;
-  rounter.style.backgroundColor = '#B8C0FF';
-  p.style.backgroundColor = '#ffffff';
+// const onOutEffect = (e: MouseEvent<HTMLLIElement>) => {
+//   const rounter = e.currentTarget.querySelector('div.ronud') as HTMLElement;
+//   const p = e.currentTarget.querySelector('p') as HTMLElement;
+//   rounter.style.backgroundColor = '#B8C0FF';
+//   p.style.backgroundColor = '#ffffff';
+// };
+
+const onListClick = (
+  e: MouseEvent<HTMLParagraphElement>,
+  station: StationType,
+  dispatch: Function
+) => {
+  return dispatch(setStation(station));
 };
 
 const StationList = ({ line, group }: Props) => {
   const [stationGroup, setStationGroup] = useState<StationType[]>([]);
-  const [selectStation] = useState(false);
   const [isClick, setClick] = useState(false);
+
+  const subwayState = useSelector((state: RootState) => state.subwayStation);
+
+  const dispatch = useDispatch();
+  const router = useRouter();
+
   useEffect(() => {
     setStationGroup(group);
   }, [group]);
@@ -64,19 +83,33 @@ const StationList = ({ line, group }: Props) => {
             <li
               className={` text-unSelectedFont flex flex-row relative`}
               key={station.stationNumber}
-              onMouseOver={onOver}
-              onMouseOut={onOut}
+              // onMouseOver={onOverEffect}
+              // onMouseOut={onOutEffect}
             >
               <div
                 className={`z-20 ${
-                  selectStation ? 'bg-white' : 'bg-darkBlue'
+                  subwayState.stationNumber === station.stationNumber
+                    ? 'bg-white'
+                    : 'bg-darkBlue'
                 } rounded-full w-5 h-5 border-4 border-darkBlue self-center ronud`}
               ></div>
-              <div className={`w-1 h-full left-2 bg-darkBlue absolute`}></div>
+              <div className={`w-1 h-full left-2 absolute bg-darkBlue`}></div>
               <p
-                className={
-                  'my-4 list w-40 h-11 items-center flex rounded-md pl-1 hover:ml-2'
-                }
+                onClick={async (e) => {
+                  await onListClick(e, station, dispatch);
+                  await router.push(
+                    `/?id=${station.stationNumber}`,
+                    undefined,
+                    {
+                      shallow: false,
+                    }
+                  );
+                }}
+                className={`${
+                  subwayState.stationNumber === station.stationNumber
+                    ? 'bg-selectedIcon'
+                    : 'bg-white'
+                } my-4 list w-40 h-11 items-center flex rounded-md pl-1 hover:ml-2 hover:bg-selectedIcon`}
               >{`${station.stationName}`}</p>
             </li>
           );

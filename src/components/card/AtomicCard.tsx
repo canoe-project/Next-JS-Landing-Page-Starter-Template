@@ -24,7 +24,7 @@ const AtomicCard = ({ atomicSymbol, value, index }: Props) => {
   // const [airQuality, setAirQuality] = useAirQuality(atomicSymbol);
 
   return (
-    <div className="z-10 flex flex-col p-2 bg-white rounded w-[5.75em] h-[5.75em] shadow-md m-4 hover:scale-110 hover: duration-300">
+    <div className="z-10 flex flex-col p-2 bg-white rounded w-[5.75em] h-[5.75em] shadow-md m-4 hover:scale-110 hover: duration-300 animate-fade-in-down">
       <p
         className={`text-lg font-bold ${
           index !== undefined

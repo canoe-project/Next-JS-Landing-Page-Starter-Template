@@ -4,7 +4,7 @@ type Props = {
 const Thermometer = ({ value = 95 }: Props) => {
   return (
     <div
-      className={`absolute z-10 h-[30em] min-h-[30em] w-8 bg-gradient-to-t from-blue to-lightPurple  rounded-full right-4 top-1/2 -translate-y-1/2`}
+      className={`absolute z-20 h-[30em] min-h-[30em] w-8 bg-gradient-to-t from-blue to-lightPurple  rounded-full right-4 top-1/2 -translate-y-1/2`}
     >
       <svg className="h-full w-[300%] filter drop-shadow-lg -translate-x-full">
         {/* 0~95 */}

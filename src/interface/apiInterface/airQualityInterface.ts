@@ -1,33 +1,3 @@
-export interface IAirQuality {
-  airflow: string;
-  asbestos: string;
-  co: string;
-  co2: string;
-  hcho: string;
-  humidity: string;
-  measureDate: string;
-  no2: string;
-  o3: string;
-  place: string;
-  pm10: string;
-  rn: string;
-  scode: string;
-  sname: string;
-  temperature: string;
-  tvoc: string;
-}
-
-export interface IAirContent {
-  nameEN: string;
-  nameKR: string;
-  description: string;
-  unit: string;
-}
-
-export interface IAirContents extends IAirContent {
-  [key: string]: string;
-}
-
 /**
  * @param {string} airflow 기류
  * @param {string} asbestos 석명
@@ -63,6 +33,36 @@ export type AirAtomics =
  * @param {string} pm10 미세 먼지
  */
 export type AirQualityValue = 'co' | 'no2' | 'o3' | 'pm10';
+
+export interface IAirQuality {
+  airflow: string;
+  asbestos: string;
+  co: string;
+  co2: string;
+  hcho: string;
+  humidity: string;
+  measureDate: string;
+  no2: string;
+  o3: string;
+  place: string;
+  pm10: string;
+  rn: string;
+  scode: string;
+  sname: string;
+  temperature: string;
+  tvoc: string;
+}
+
+export interface IAirContent {
+  nameEN: string;
+  nameKR: string;
+  description: string;
+  unit: string;
+}
+
+export interface IAirContents extends IAirContent {
+  [key: string]: string;
+}
 
 export interface IBP {
   BPLO: number;

@@ -21,7 +21,8 @@
       "styles/*": ["src/styles/*"],
       "utils/*": ["src/utils/*"],
       "data/*": ["src/data/*"],
-      "interface/*": ["src/interface/*"]
+      "interface/*": ["src/interface/*"],
+      "store/*": ["src/store/*"]
     }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*"],

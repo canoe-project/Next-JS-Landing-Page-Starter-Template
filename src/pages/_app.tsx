@@ -1,5 +1,8 @@
 import { NextComponentType } from 'next';
 import { AppContext, AppInitialProps, AppProps } from 'next/app';
+import { Provider } from 'react-redux';
+
+import { store } from 'store/store';
 
 import 'styles/global.css';
 
@@ -8,9 +11,9 @@ const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
   pageProps,
 }) => {
   return (
-    <>
+    <Provider store={store}>
       <Component {...pageProps} />
-    </>
+    </Provider>
   );
 };
 
