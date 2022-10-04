@@ -104,6 +104,7 @@ const StationList = ({ line, group }: Props) => {
                       shallow: false,
                     }
                   );
+                  await router.reload();
                 }}
                 className={`${
                   subwayState.stationNumber === station.stationNumber

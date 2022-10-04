@@ -43,18 +43,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     .then(async ({ data }) => {
       return JSON.parse(iconv.decode(data, 'EUC-KR'));
     });
-
-  // const data = await fetch(
-  //   `http://data.humetro.busan.kr/voc/api/open_api_airquality.tnn?ServiceKey=${process.env.PUBLIC_DATA_SERVICE_KEY}&pageNo=${pageNo}&numOfRows=${numOfRows}&act=${act}&year=${year}&scode=${scode}`,
-  //   {
-  //     method: 'GET',
-  //     headers: { 'Content-Type': 'application/json; charset=utf8' },
-  //   }
-  // ).then((response) => {
-  //   return response.json();
-  // });
-  // console.log(data.response.body.item);
-  console.log(apiAirquality);
   return { props: { apiAirquality } };
 };
 
